@@ -1,0 +1,19 @@
+name: GitHub Actions Demo
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger single Job
+      uses: Patel Vishal/jenkins-action@master
+      with:
+        url: "http://13.235.254.200:8080/"
+        user: "Vishal"
+        token: "11f75fd06675de187f854f556ac61cfdf3"
+        job: "auto_deploy"
